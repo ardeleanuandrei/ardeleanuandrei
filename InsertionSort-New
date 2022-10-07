@@ -1,0 +1,21 @@
+def  insertionSort ( matrice ):
+
+    pentru  pas  în  interval ( 1 , len ( matrice )):
+        cheie  =  matrice [ pas ]
+        j  =  pas  -  1
+
+        # Comparați cheia cu fiecare element din stânga acestuia până când se găsește un element mai mic decât acesta
+        # Pentru ordinea descrescătoare, schimbați key<array[j] to key>array[j].        
+        în timp ce  j  >=  0  și  tasta  <  matrice [ j ]:
+            matrice [ j  +  1 ] =  matrice [ j ]
+            j  =  j  -  1
+
+        matrice [ j  +  1 ] =  cheie
+
+date  = [ 9 , 5 , 1 , 4 , 3 ]
+print ( 'Matrice nesortată:' )
+imprimare ( date )
+insertionSort ( date )
+print ( 'Matrice sortată în ordine crescătoare:' )
+imprimare ( date 
+partiție def ( matrice , low , high ):
