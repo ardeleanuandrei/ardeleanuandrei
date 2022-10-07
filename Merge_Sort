@@ -1,0 +1,51 @@
+partiție def ( matrice , low , high ):
+
+  # alegeți elementul din dreapta drept pivot
+  pivot  =  matrice [ mare ]
+
+  # pointer pentru element mai mare
+  i  =  scăzut  -  1
+
+  # traversează toate elementele
+  # compara fiecare element cu pivot
+  pentru  j  în  interval ( scăzut , ridicat ):
+    dacă  matrice [ j ] <=  pivot :
+      # dacă este găsit un element mai mic decât pivotul
+      # schimbă-l cu elementul mai mare indicat de i
+      i  =  i  +  1
+
+      # schimbând elementul de la i cu elementul de la j
+      ( matrice [ i ], matrice [ j ]) = ( matrice [ j ], matrice [ i ])
+
+  # schimba elementul pivot cu elementul mai mare specificat de i
+  ( matrice [ i  +  1 ], matrice [ mare ]) = ( matrice [ înaltă ], matrice [ i  +  1 ])
+
+  # returnează poziția de unde se face partiția
+  returnează  i  +  1
+
+# pentru a efectua sortarea rapidă
+def  quickSort ( matrice , low , high ):
+  dacă  scăzut  <  ridicat :
+
+    # găsiți elementul pivot astfel încât
+    # element mai mic decât pivotul sunt în stânga
+    # elemente mai mari decât pivot sunt în dreapta
+    pi  =  partiție ( matrice , low , high )
+
+    # apel recursiv în stânga pivotului
+    quickSort ( matrice , low , pi  -  1 )
+
+    # apel recursiv în dreapta pivotului
+    quickSort ( matrice , pi  +  1 , mare )
+
+
+date  = [ 8 , 7 , 2 , 1 , 0 , 9 , 6 ]
+print ( „Matrice nesortată” )
+imprimare ( date )
+
+dimensiune  =  len ( date )
+
+sortare rapidă ( date , 0 , dimensiune  -  1 )
+
+print ( 'Matrice sortată în ordine crescătoare:' )
+imprimare ( date )
